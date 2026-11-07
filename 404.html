@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>페이지를 찾을 수 없어요 | KIMPURPLE</title>
+  <meta name="theme-color" content="#0d0a13">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('kp-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <!-- 404 페이지는 어느 경로에서든 열리므로 절대 경로를 사용합니다 -->
+  <base href="/">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/common.js" defer></script>
+</head>
+<body data-page="404">
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="state state--empty">
+          <div class="state__icon" aria-hidden="true">?</div>
+          <p class="state__title">페이지를 찾을 수 없어요</p>
+          <p class="state__text">주소가 바뀌었거나 삭제된 페이지예요.</p>
+          <a class="btn btn--primary btn--sm" href="index.html">홈으로 가기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>

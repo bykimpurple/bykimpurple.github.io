@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHARACTERS | KIMPURPLE</title>
+  <meta name="description" content="KIMPURPLE의 전체 캐릭터 목록. 플랫폼별로 캐릭터를 찾아보세요.">
+  <meta name="theme-color" content="#0d0a13">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('kp-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/characters.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/characters.js" defer></script>
+</head>
+<body data-page="characters">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Archive</span>
+        <h1 class="page-hero__title">CHARACTERS</h1>
+        <p class="page-hero__desc">KIMPURPLE의 모든 캐릭터를 모았습니다. 이름이나 태그로 검색하거나 원하는 조건으로 골라보세요.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight section--flush-top">
+      <div class="container">
+        <div class="toolbar">
+          <div class="search">
+            <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label class="visually-hidden" for="search-input">캐릭터 검색</label>
+            <input class="search__input" id="search-input" type="search" placeholder="이름, 태그, 키워드로 검색" autocomplete="off" enterkeyhint="search">
+            <button class="search__clear" id="search-clear" type="button" aria-label="검색어 지우기" hidden>×</button>
+          </div>
+          <div class="toolbar__actions">
+            <button class="btn btn--ghost btn--sm filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
+              필터 <span class="filter-toggle__count" id="filter-count" hidden></span>
+            </button>
+            <label class="visually-hidden" for="sort-select">정렬</label>
+            <select class="select" id="sort-select">
+              <option value="latest">최신순</option>
+              <option value="oldest">오래된순</option>
+              <option value="name">이름순</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-panel" id="filter-panel"></div>
+
+        <div class="result-bar">
+          <p class="result-bar__count" id="result-count" aria-live="polite"></p>
+          <button class="result-bar__reset" id="filter-reset" type="button" hidden>필터 초기화</button>
+        </div>
+
+        <div class="card-grid" id="character-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

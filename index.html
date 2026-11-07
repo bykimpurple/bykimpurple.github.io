@@ -1,1 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIMPURPLE | 캐릭터 아카이브</title>
+  <meta name="description" content="케이브덕 · 로판AI 크리에이터 KIMPURPLE의 캐릭터 아카이브">
+  <meta property="og:title" content="KIMPURPLE">
+  <meta property="og:description" content="케이브덕 · 로판AI 크리에이터 KIMPURPLE의 캐릭터 아카이브">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0d0a13">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('kp-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header id="site-header"></header>
 
+  <main id="main">
+    <!-- 메인 배너 -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__orb hero__orb--1"></span>
+        <span class="hero__orb hero__orb--2"></span>
+        <span class="hero__stars"></span>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Character Archive · Caveduck &amp; RofanAI</p>
+        <h1 class="hero__title">KIMPURPLE</h1>
+        <p class="hero__lead">초보제작자 김퍼플입니다.<br>문의는 언제나 환영입니다.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="characters.html">캐릭터 보러가기</a>
+          <a class="btn btn--ghost" href="about.html">크리에이터 소개</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 홈페이지 소개 -->
+    <section class="section section--tight intro">
+      <div class="container intro__inner">
+        <div class="intro__text">
+          <span class="eyebrow">About this archive</span>
+          <h2 class="section-title">캐릭터를 만나기 전, 먼저 읽어보는 곳</h2>
+          <p class="section-desc">케이브덕과 로판AI에서 만날 수 있는 KIMPURPLE의 캐릭터들을 한곳에 모았습니다. 프로필과 세계관, 추천 페르소나와 플레이 가이드를 확인하고 마음에 드는 캐릭터와 대화를 시작해 보세요.</p>
+        </div>
+        <div class="intro__stats" aria-live="polite">
+          <a class="stat" href="characters.html?status=released"><span class="stat__label">공개 캐릭터</span><span class="stat__value" id="stat-characters">–</span></a>
+          <a class="stat" href="characters.html?status=upcoming"><span class="stat__label">출시 예정</span><span class="stat__value" id="stat-upcoming">–</span></a>
+          <a class="stat" href="about.html#links-title"><span class="stat__label">플랫폼</span><span class="stat__value">2</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 최근 출시 -->
+    <section class="section" aria-labelledby="recent-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">New arrivals</span>
+            <h2 class="section-title" id="recent-title">최근 출시 캐릭터</h2>
+          </div>
+          <a class="more-link" href="characters.html?sort=latest">전체 보기</a>
+        </div>
+        <div class="card-grid" id="recent-grid"></div>
+      </div>
+    </section>
+
+    <!-- 출시 예정 -->
+    <section class="section featured" aria-labelledby="upcoming-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Coming soon</span>
+            <h2 class="section-title" id="upcoming-title">출시 예정 캐릭터</h2>
+          </div>
+          <a class="more-link" href="characters.html?status=upcoming">전체 보기</a>
+        </div>
+        <div class="card-grid" id="upcoming-grid"></div>
+        <p class="section-note">※ 출시 일정과 캐릭터 에셋(이미지·설정 등)은 변경될 수 있어요.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2 class="cta__title">모든 캐릭터를 한눈에</h2>
+            <p class="cta__desc">플랫폼, 페어링, 등급별로 원하는 캐릭터를 찾아보세요.</p>
+          </div>
+          <a class="btn btn--primary" href="characters.html">전체 캐릭터 보기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

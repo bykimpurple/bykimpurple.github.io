@@ -1,0 +1,78 @@
+<!--
+  ===========================================================
+  캐릭터 상세 본문 템플릿
+  ===========================================================
+  사용법
+  1. 이 파일을 복사해서 "캐릭터id.html" 로 이름을 바꿉니다.
+     예) data/characters.json 의 id 가 "han-doha" 라면 → content/characters/han-doha.html
+  2. 아래 내용을 자유롭게 고쳐 쓰면 됩니다.
+     - 헤더/푸터/상단 프로필(이미지·이름·태그·플레이 버튼)은 JSON 정보로 자동 표시됩니다.
+     - 이 파일 내용은 그 아래 "본문" 자리에 들어갑니다.
+     - 이 파일이 있으면 JSON의 intro / personality / appearance / world /
+       relationshipDetail / persona / guide 는 표시되지 않습니다. (갤러리·관련 캐릭터는 그대로 표시)
+  3. 이미지 경로는 사이트 맨 위 폴더 기준입니다.
+     예) <img src="assets/characters/han-doha/scene1.webp" alt="">
+
+  쓸 수 있는 것
+  - <section> 하나 = 카드 하나
+  - <h2> 제목, <h3> 소제목, <p> 문단, <ul>/<ol> 목록
+  - <blockquote> 대사 인용
+  - <figure><img><figcaption> 이미지 + 설명
+  - <table> 표
+  - <div class="cols"> 안에 <section> 두 개 → 2단 배치 (모바일에서는 1단)
+  - <div class="note"> 강조 박스
+  - <span class="eyebrow">English Label</span> 작은 보라색 라벨
+  - <style> 로 이 캐릭터 페이지에만 디자인 추가 가능 (아래 예시 참고)
+  - <script> 는 보안상 실행되지 않습니다.
+  ===========================================================
+-->
+
+<!-- (선택) 이 캐릭터 페이지만 메인 색을 바꾸고 싶을 때 -->
+<!--
+<style>
+  .detail { --primary: #f472b6; --primary-soft: rgba(244, 114, 182, 0.14); }
+</style>
+-->
+
+<section>
+  <span class="eyebrow">Story</span>
+  <h2>캐릭터 소개</h2>
+  <p>첫 번째 문단.</p>
+  <p>두 번째 문단.</p>
+  <blockquote>"캐릭터의 대표 대사를 여기에."</blockquote>
+</section>
+
+<div class="cols">
+  <section>
+    <span class="eyebrow">Personality</span>
+    <h2>성격</h2>
+    <ul>
+      <li>성격 1</li>
+      <li>성격 2</li>
+    </ul>
+  </section>
+  <section>
+    <span class="eyebrow">Appearance</span>
+    <h2>외형</h2>
+    <p>외형 설명.</p>
+  </section>
+</div>
+
+<section>
+  <span class="eyebrow">Profile</span>
+  <h2>상세 프로필</h2>
+  <table>
+    <tr><th>키</th><td>185cm</td></tr>
+    <tr><th>좋아하는 것</th><td>블랙커피, 비 오는 날</td></tr>
+  </table>
+</section>
+
+<section>
+  <span class="eyebrow">Play guide</span>
+  <h2>플레이 가이드</h2>
+  <ol>
+    <li>첫 번째 팁</li>
+    <li>두 번째 팁</li>
+  </ol>
+  <div class="note">💡 이런 식으로 강조 박스를 넣을 수 있어요.</div>
+</section>

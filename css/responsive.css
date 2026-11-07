@@ -1,0 +1,344 @@
+/* =========================================================
+   KIMPURPLE — responsive.css
+   PC: 카드 4열 / 태블릿: 3→2열 / 모바일: 2열
+   ========================================================= */
+
+/* ---------- 태블릿 (가로) ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .detail-hero {
+    gap: 36px;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .intro__inner {
+    gap: 32px;
+  }
+}
+
+/* ---------- 태블릿 (세로) & 모바일 메뉴 ---------- */
+@media (max-width: 768px) {
+  :root {
+    --header-h: 60px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .section--tight {
+    padding: 36px 0;
+  }
+
+  .section--flush-top {
+    padding-top: 0;
+  }
+
+  .page-hero {
+    padding: 44px 0 28px;
+  }
+
+  /* 햄버거 메뉴 */
+  .nav-toggle {
+    display: inline-grid;
+  }
+
+  .nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 20px var(--gutter) 40px;
+    background: var(--bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+    overflow-y: auto;
+  }
+
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .nav__link {
+    padding: 16px 12px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav__link.is-active::after {
+    left: auto;
+    right: 12px;
+    top: 50%;
+    bottom: auto;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+  }
+
+  .header__actions {
+    margin-left: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  /* 메인 */
+  .intro__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 28px;
+  }
+
+  /* 캐릭터 목록 */
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    flex-basis: 100%;
+  }
+
+  .toolbar__actions {
+    width: 100%;
+  }
+
+  .filter-toggle {
+    display: inline-flex;
+    flex: 1;
+  }
+
+  .select {
+    flex: 1;
+  }
+
+  .filter-panel {
+    display: none;
+    margin-top: 12px;
+    padding: 18px;
+  }
+
+  .filter-panel.is-open {
+    display: grid;
+    animation: fadeIn 0.25s var(--ease);
+  }
+
+  .filter-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* 캐릭터 상세 */
+  .detail-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .detail-hero__media {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .detail-hero__info {
+    padding-top: 0;
+  }
+
+  .detail-body {
+    margin-top: 40px;
+    gap: 16px;
+  }
+
+  .detail-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .detail-section,
+  .custom-content > section,
+  .custom-content .cols > section {
+    padding: 26px 24px;
+  }
+
+  .custom-content .cols {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .detail-related {
+    margin-top: 56px;
+  }
+
+  /* ABOUT */
+  .about-grid,
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 26px 24px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ---------- 모바일 ---------- */
+@media (max-width: 560px) {
+  :root {
+    --gutter: 16px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .section-head {
+    margin-bottom: 20px;
+  }
+
+  .hero {
+    min-height: 0;
+  }
+
+  .hero__inner {
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
+
+  .hero__title {
+    font-size: 10.5vw;
+    letter-spacing: 0.06em;
+    padding-left: 0.06em;
+  }
+
+  .hero__eyebrow {
+    letter-spacing: 0.18em;
+    font-size: 0.6875rem;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .intro__stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 16px 8px;
+  }
+
+  .stat__value {
+    font-size: 1.6rem;
+  }
+
+  .card-grid {
+    gap: 12px;
+  }
+
+  .char-card__body {
+    padding: 12px 12px 14px;
+    gap: 6px;
+  }
+
+  .char-card__title {
+    font-size: 0.9375rem;
+  }
+
+  .char-card__desc {
+    font-size: 0.75rem;
+  }
+
+  .char-card__media .badge {
+    top: 8px;
+    left: 8px;
+    padding: 3px 8px;
+    font-size: 0.625rem;
+  }
+
+  .char-card__media .badge.badge--adult {
+    right: 8px;
+  }
+
+  .char-card .tag {
+    font-size: 0.6875rem;
+    padding: 2px 8px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .play-buttons .btn {
+    flex: 1 1 100%;
+  }
+
+  .profile-grid__item {
+    padding: 12px 14px;
+  }
+
+  .persona-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .about-avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 2.4rem;
+  }
+
+  .lightbox__nav {
+    top: auto;
+    bottom: 24px;
+    transform: none;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+}
