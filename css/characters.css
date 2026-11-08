@@ -286,6 +286,11 @@
   box-shadow: 1px 0 0 var(--border), 0 1px 0 var(--border);
 }
 
+/* 직업처럼 긴 항목은 두 칸 차지 */
+.profile-grid__item--wide {
+  grid-column: span 2;
+}
+
 .profile-grid dt {
   font-size: 0.75rem;
   color: var(--text-muted);

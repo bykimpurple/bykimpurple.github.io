@@ -100,14 +100,18 @@
 
   /* ---------- 상단 프로필 ---------- */
   function hero(c) {
+    // 순서: 나이 · 성별 · 키 / 생일 · (기타 항목) · 직업(두 칸)
+    const extra = c.profile && typeof c.profile === 'object' && !Array.isArray(c.profile) ? c.profile : {};
     const profile = [
       ['나이', c.age],
       ['성별', c.gender],
-      ['직업', c.occupation],
+      ['키', KP.str(extra['키'])],
+      ['생일', KP.str(extra['생일'])],
+      ...Object.entries(extra)
+        .filter(([k]) => k !== '키' && k !== '생일')
+        .map(([k, v]) => [k, KP.str(v)]),
+      ['직업', c.occupation, true],
     ];
-    if (c.profile && typeof c.profile === 'object' && !Array.isArray(c.profile)) {
-      Object.entries(c.profile).forEach(([k, v]) => profile.push([k, KP.str(v)]));
-    }
     const profileItems = profile.filter(([, v]) => v);
 
     // 장르 · 출시일은 프로필 표 밖, 이름 위에 따로 표시
@@ -143,7 +147,14 @@
           ? el(
               'dl',
               { class: 'profile-grid' },
-              profileItems.map(([k, v]) => el('div', { class: 'profile-grid__item' }, el('dt', { text: k }), el('dd', { text: v })))
+              profileItems.map(([k, v, wide]) =>
+                el(
+                  'div',
+                  { class: 'profile-grid__item' + (wide ? ' profile-grid__item--wide' : '') },
+                  el('dt', { text: k }),
+                  el('dd', { text: v })
+                )
+              )
             )
           : null,
         playButtons(c)
@@ -167,7 +178,7 @@
 
     if (buttons.length) return el('div', { class: 'play-buttons' }, buttons);
     if (c.status === 'upcoming') {
-      return el('p', { class: 'play-note', text: '출시 준비 중이에요. 공개되면 이곳에서 바로 플레이할 수 있어요.' });
+      return el('p', { class: 'play-note', text: '출시 준비 중이에요.' });
     }
     return null;
   }
@@ -286,22 +297,12 @@
   /* ---------- 관련 캐릭터 ---------- */
   function relatedCharacters(c, chars) {
     const others = chars.filter((x) => x.id !== c.id);
-    // 1) 직접 지정한 related  2) 지정하지 않았으면 같은 페어링(HL/GL/BL) 또는 같은 장르
-    //    (둘 다 겹치는 캐릭터가 먼저)
+    // data/characters.json 의 "related" 에 직접 적은 캐릭터만 표시 (없으면 섹션 숨김)
     const picked = [];
     const add = (x) => {
       if (x && !picked.includes(x) && picked.length < RELATED_COUNT) picked.push(x);
     };
     c.related.forEach((rid) => add(others.find((x) => x.id === rid)));
-    if (!c.related.length) {
-      const score = (x) =>
-        (x.pairing.some((p) => c.pairing.includes(p)) ? 1 : 0) + (x.genre.some((g) => c.genre.includes(g)) ? 1 : 0);
-      others
-        .map((x) => ({ x, s: score(x) }))
-        .filter((o) => o.s > 0)
-        .sort((a, b) => b.s - a.s)
-        .forEach((o) => add(o.x));
-    }
     return picked;
   }
 })();
