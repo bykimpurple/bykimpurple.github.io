@@ -110,5 +110,25 @@
     "status": "upcoming",
     "featured": false,
     "adult": true
+  },
+  {
+    "id": "edoardo-marini",
+    "name": "에도아르도 마리니",
+    "age": "35세",
+    "gender": "남성",
+    "occupation": "유저의 전담 비서",
+    "description": "",
+    "genre": ["현대"],
+    "pairing": ["HL"],
+    "tags": ["이탈리아", "비서"],
+    "profile": { "키": "184cm" },
+    "images": {
+      "thumbnail": "https://i.imgur.com/2IgVMJK.png",
+      "main": "https://i.imgur.com/2IgVMJK.png"
+    },
+    "platforms": {},
+    "releaseDate": "",
+    "status": "upcoming",
+    "featured": false
   }
 ]
