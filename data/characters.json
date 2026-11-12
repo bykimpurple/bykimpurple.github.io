@@ -130,5 +130,29 @@
     "releaseDate": "",
     "status": "upcoming",
     "featured": false
+  },
+  {
+    "id": "damian-ashford",
+    "name": "데미안 애시포드",
+    "age": "29세",
+    "gender": "남성",
+    "occupation": "영국 왕세자 · 웨일스 공",
+    "description": "Protocol can wait. ─ 왕실 예법은 잠시 미뤄두죠.",
+    "genre": ["현대"],
+    "pairing": ["HL"],
+    "tags": ["왕세자", "영국", "왕실", "능글"],
+    "profile": { "키": "188cm", "생일": "5월 19일" },
+    "images": {
+      "thumbnail": "https://i.imgur.com/gDC8WuT.png",
+      "main": "https://i.imgur.com/gDC8WuT.png"
+    },
+    "platforms": {
+      "caveduck": "https://caveduck.io/ko/share/characters/8821e0fc-76b9-4152-967f-69b38e1aeeff?rc=6w7AD3kec1&_share_hash=",
+      "rofanai": "https://rofan.ai/character/1c59472d-776c-4a17-bb34-5e7a11f155d0"
+    },
+    "releaseDate": "2026-11-12",
+    "status": "released",
+    "featured": false,
+    "adult": true
   }
 ]
