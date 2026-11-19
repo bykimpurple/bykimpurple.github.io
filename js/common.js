@@ -11,7 +11,7 @@
   /* ---------- 설정 ---------- */
   KP.config = {
     siteName: 'KIMPURPLE',
-    newDays: 30, // 출시 후 며칠 동안 NEW 배지를 붙일지
+    newDays: 14, // 출시 후 며칠 동안 NEW 배지를 붙일지
     placeholder: 'assets/icons/placeholder.svg',
     themeKey: 'kp-theme',
   };

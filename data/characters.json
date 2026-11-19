@@ -94,20 +94,23 @@
   {
     "id": "logan-hayes",
     "name": "로건 헤이스",
-    "age": "",
+    "age": "21세",
     "gender": "남성",
-    "occupation": "",
-    "description": "",
+    "occupation": "레이븐스 #17 · C · 1라인 에이스",
+    "description": "Kiss me, my Lucky charm. ─ 키스해줘, 내 행운의 여신.",
     "genre": ["현대"],
-    "pairing": [],
-    "tags": ["하이틴", "하키"],
+    "pairing": ["HL"],
+    "tags": ["하이틴", "하키", "대학교", "능글", "플러팅", "키스메이트"],
+    "profile": { "키": "189cm", "생일": "12월 24일" },
     "images": {
-      "thumbnail": "https://i.imgur.com/HEWJnOD.jpeg",
-      "main": "https://i.imgur.com/HEWJnOD.jpeg"
+      "thumbnail": "https://i.imgur.com/Vzv2FrW.png",
+      "main": "https://i.imgur.com/Vzv2FrW.png"
     },
-    "platforms": {},
-    "releaseDate": "",
-    "status": "upcoming",
+    "platforms": {
+      "rofanai": ""
+    },
+    "releaseDate": "2026-11-19",
+    "status": "released",
     "featured": false,
     "adult": true
   },
